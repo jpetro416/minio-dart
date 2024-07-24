@@ -55,7 +55,7 @@ class MinioUploader implements StreamConsumer<Uint8List> {
         headers['Content-MD5'] = base64.encode(md5digest);
       }
       if (minio.sessionToken != null) {
-        headers['x-amz-security-token'] = minio.sessionToken;  // add this line https://github.com/xtyxtyx/minio-dart/issues/88
+        headers['x-amz-security-token'] = minio.sessionToken!;  // add this line https://github.com/xtyxtyx/minio-dart/issues/88
       }
     
 
